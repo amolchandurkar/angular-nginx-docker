@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-nginx-docker-org",
+            "outputPath": "dist/angular-nginx-docker",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-nginx-docker-org:build"
+            "browserTarget": "angular-nginx-docker:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-nginx-docker-org:build:production"
+              "browserTarget": "angular-nginx-docker:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-nginx-docker-org:build"
+            "browserTarget": "angular-nginx-docker:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-nginx-docker-org:serve"
+            "devServerTarget": "angular-nginx-docker:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-nginx-docker-org:serve:production"
+              "devServerTarget": "angular-nginx-docker:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "angular-nginx-docker-org"
+  "defaultProject": "angular-nginx-docker"
 }
